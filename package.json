@@ -1,16 +1,15 @@
 {
   "name": "team-task-manager",
   "version": "1.0.0",
-  "description": "Team Task Management Application",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && npm run dev",
     "client": "cd frontend && npm run dev",
     "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && npm start",
-    "postinstall": "npm run build"
+    "start": "cd backend && node server.js",
+    "postinstall": "cd frontend && npm install && npm run build"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.0"
   }
 }
