@@ -23,7 +23,7 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../frontend/dist');
+  const frontendPath = path.join(__dirname, 'public');
   app.use(express.static(frontendPath));
 
   // Send index.html for any non-API routes (SPA support)
